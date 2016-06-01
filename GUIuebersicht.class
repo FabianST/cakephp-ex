@@ -1,0 +1,32 @@
+import javax.swing.*;
+
+public class GUIuebersicht {
+	
+	public static void main (String [] args){
+		
+		JFrame uebersicht = new JFrame ("Übersicht");
+		JPanel uebersichtHauptPanel = new JPanel ();
+		JPanel uebersichtSuedPanel = new JPanel();
+		JLabel ueberschrift = new JLabel ("Aktien-Übersicht");
+		JButton hinzufuegen = new JButton ("neu Aktien");
+		JButton loeschen = new JButton ("Aktie entfernen");
+		
+		//Frame konfigurieren
+		uebersicht.setSize(800,600);
+		uebersicht.setVisible(true);
+		uebersichtHauptPanel.setLayout(new BorderLayout());
+		uebersicht.add(uebersichtHauptPanel);
+		
+		//Überschrift anordnen
+		ueberschrift.setHorizontalAlignment(JLabel.LEFT);
+		ueberschrift.setVerticalAlignment(JLabel.TOP);
+		uebersichtHauptPanel.add(ueberschrift, BorderLayout.NORTH);
+		
+		//Hinzufügn- und Entfernen-Button anordnen
+		uebersichtSuedPanel.setLayout(new FlowLayout());
+		uebersichtSuedPanel.add(hinzufuegen);
+		uebersichtSuedPanel.add(loeschen);
+		
+	}
+
+}
